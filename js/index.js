@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+}
+
 var app = {
     fontsLoaded: false,
     deviceReady: false,
