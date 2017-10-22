@@ -49,8 +49,8 @@ this.addEventListener('activate', event => {
         keys.map(key => {
 			const cacheNameParts = key.split('-');
 			if (cacheNameParts[0]===CACHE_PREFIX
-			&& Number(cacheNameParts[1])!==Number(CACHE_VERSION)
-			&& cacheNameParts[2]==='static'
+			&& cacheNameParts[1]==='static'
+			&& Number(cacheNameParts[2])!==Number(CACHE_VERSION)
 			) {
 				return caches.delete(key);
 			}
